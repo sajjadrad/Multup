@@ -190,7 +190,8 @@ class Multup {
 				}
 
 			} else {
-				$errors = 'Could not save image';
+				$errors = new \Laravel\Messages;
+				$errors->add("file", "Could not save image");
 			}
 		}
 
